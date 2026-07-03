@@ -1,0 +1,236 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #14141c;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brandIcon {
+  font-size: 18px;
+  color: #7c3aed;
+}
+
+.brandText {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #f0f0f8;
+}
+
+.navLinks {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.navLink {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9a9ab0;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #f0f0f8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.active {
+  color: #f0f0f8;
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.navRight {
+  flex-shrink: 0;
+}
+
+.userMenu {
+  position: relative;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 220px;
+  max-width: calc(100vw - 32px); /* never overflows the viewport on narrow screens */
+  background: #1a1a24;
+  border: 1px solid #2a2a3a;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  z-index: 60;
+}
+
+.dropdownUser {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  gap: 2px;
+}
+
+.dropdownName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f0f0f8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdownEmail {
+  font-size: 12px;
+  color: #6a6a80;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #d0d0e0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.logoutBtn {
+  color: #ff5c7c;
+}
+
+/* ── Logout confirmation row ────────────────────────────────────── */
+.logoutConfirm {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logoutConfirmText {
+  font-size: 13px;
+  color: #f0f0f8;
+  font-weight: 600;
+}
+
+.logoutConfirmActions {
+  display: flex;
+  gap: 8px;
+}
+
+.logoutCancelBtn,
+.logoutConfirmBtn {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.logoutCancelBtn {
+  background: #2a2a3a;
+  color: #d0d0e0;
+}
+
+.logoutCancelBtn:hover {
+  opacity: 0.85;
+}
+
+.logoutConfirmBtn {
+  background: #ff5c7c;
+  color: #fff;
+}
+
+.logoutConfirmBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── Tablets/small screens: hide text labels, keep icons compact ──── */
+@media (max-width: 640px) {
+  .inner {
+    padding: 0 14px;
+    height: 56px;
+  }
+
+  .brandText {
+    display: none; /* icon-only brand mark to save space */
+  }
+
+  .navLink {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .inner {
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .navLinks {
+    gap: 2px;
+  }
+
+  .navLink {
+    padding: 6px 8px;
+    font-size: 12.5px;
+  }
+
+  .dropdown {
+    width: 200px;
+  }
+}

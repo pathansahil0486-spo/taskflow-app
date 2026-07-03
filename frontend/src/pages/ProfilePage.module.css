@@ -1,0 +1,190 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #0f0f16;
+}
+
+.main {
+  padding: 24px 20px 60px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  margin-bottom: 4px;
+}
+
+.title {
+  font-family: 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f0f0f8;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #9a9ab0;
+  margin: 0;
+}
+
+/* ── Profile card ───────────────────────────────────────────────── */
+.profileCard {
+  padding: 20px;
+}
+
+.avatarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.userInfo {
+  min-width: 0; /* prevents flex overflow on long names/emails */
+  flex: 1 1 auto;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 16px;
+  color: #f0f0f8;
+  margin: 0 0 2px;
+  word-break: break-word;
+}
+
+.userEmail {
+  font-size: 13px;
+  color: #9a9ab0;
+  margin: 0 0 4px;
+  word-break: break-word;
+}
+
+.userSince {
+  font-size: 12px;
+  color: #6a6a80;
+  margin: 0;
+}
+
+/* ── Form sections ──────────────────────────────────────────────── */
+.sectionTitle {
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0f0f8;
+  margin: 0 0 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.disabledInput {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hintText {
+  font-size: 12px;
+  color: #6a6a80;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.formFooter button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnSpinner {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Tablets and up ─────────────────────────────────────────────── */
+@media (min-width: 640px) {
+  .main {
+    padding: 32px 24px 60px;
+  }
+}
+
+/* ── Small phones (≤480px) ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  .main {
+    padding: 16px 14px 48px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .profileCard {
+    padding: 16px;
+  }
+
+  .avatarWrapper {
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 17px;
+  }
+
+  .formFooter {
+    justify-content: stretch;
+  }
+
+  .formFooter button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── Extra-small phones (320px–360px) ───────────────────────────── */
+@media (max-width: 360px) {
+  .main {
+    padding: 12px 10px 40px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .avatarWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}

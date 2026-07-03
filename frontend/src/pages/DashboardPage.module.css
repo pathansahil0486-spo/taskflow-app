@@ -1,0 +1,171 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #0f0f16;
+}
+
+.main {
+  padding: 24px 20px 60px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  flex: 1 1 240px;
+  min-width: 0; /* allows text truncation/wrapping instead of forcing overflow */
+}
+
+.greeting {
+  font-family: 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f0f0f8;
+  margin: 0 0 6px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.name {
+  color: #7c3aed;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #9a9ab0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.newTaskBtn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ── Bulk actions ───────────────────────────────────────────────── */
+.bulkActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.todoCount {
+  font-size: 13px;
+  color: #6a6a80;
+  margin-left: auto;
+}
+
+/* ── Todo list ──────────────────────────────────────────────────── */
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.loadingText {
+  color: #6a6a80;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.emptyStateBtn {
+  margin-top: 8px;
+}
+
+/* ── Tablets and up ─────────────────────────────────────────────── */
+@media (min-width: 640px) {
+  .main {
+    padding: 32px 24px 60px;
+  }
+
+  .greeting {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 900px) {
+  .main {
+    padding: 40px 32px 60px;
+  }
+}
+
+/* ── Small phones (≤480px) ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  .main {
+    padding: 16px 14px 48px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .greeting {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .newTaskBtn {
+    width: 100%;
+  }
+
+  .bulkActions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .bulkActions > button {
+    width: 100%;
+  }
+
+  .todoCount {
+    margin-left: 0;
+    text-align: center;
+    order: -1; /* show count first on mobile, above the action buttons */
+  }
+}
+
+/* ── Extra-small phones (320px–360px) ───────────────────────────── */
+@media (max-width: 360px) {
+  .main {
+    padding: 12px 10px 40px;
+  }
+
+  .greeting {
+    font-size: 18px;
+  }
+
+  .loadingWrapper {
+    padding: 40px 12px;
+  }
+}
